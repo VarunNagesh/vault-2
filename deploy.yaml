@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-sleep
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ubuntu-sleep
+  template:
+    metadata:
+      labels:
+        app: ubuntu-sleep
+    spec:
+      containers:
+      - name: ubuntu-sleep
+        image: ubuntu:latest
+        command: ["sleep", "infinity"]
+      envFrom:
+        - secretRef: 
+          name: dbname-secret
