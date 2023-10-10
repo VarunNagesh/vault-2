@@ -11,6 +11,7 @@ spec:
       containers:
       - name: restart
         image: vvaarruunn/kubectlrestart:v1
-        command: ["./restart.sh"]
+        command: ["bash"]
+        arg: ["restart.sh"]
       restartPolicy: Never
   backoffLimit: 0
