@@ -18,5 +18,5 @@ spec:
         image: ubuntu:latest
         command: ["sleep", "infinity"]
         envFrom:
-        - secretRef: 
-          name: dbname-secret
+        - secretRef:
+            name: dbname-secret
