@@ -4,7 +4,7 @@ metadata:
   name: dbname-secret
   namespace: default
   annotations:
-    avp.kubernetes.io/path: "secret/data/mysql/"
+    avp.kubernetes.io/path: "secret/data/mysql/webapp"
 type: Opaque
 stringData:
   webapp: <webapp>
